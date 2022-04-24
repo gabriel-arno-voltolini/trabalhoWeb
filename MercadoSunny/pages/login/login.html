@@ -1,0 +1,36 @@
+<!-- 28/04/2022
+Gabriel Arno Voltolini
+Lucas Mota de Oliveira
+Victor do Amaral -->
+
+<!-- TODO Melhorar a UI -->
+<!-- TODO Validar os campos de senha e login -->
+<!-- TODO Ao clicar no login um cookie deve ser criado com o conteúdo do campo login armazenado no mesmo -->
+
+<!DOCTYPE html>
+  <head>
+    <link rel="stylesheet" href="login.css">      
+  </head>
+  <body>
+    <div id="login-root-div">
+      <div id="login-div">
+        <h1>Welcome</h1>
+        <form>
+          <div>
+            <label class="custom-field">
+              <input name="userName" type="text" />
+              <span class="placeholder">Username</span>
+            </label>
+          </div>
+          <div>
+            <label class="custom-field">
+              <input name="password" type="password" />
+              <span class="placeholder">Password</span>
+            </label>
+          </div>
+          <button type="submit" onClick="{handleLogin}">Login</button>
+        </form>
+      </div>
+    </div>
+  </body>
+</html>
