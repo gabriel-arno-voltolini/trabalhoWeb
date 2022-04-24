@@ -21,6 +21,10 @@ input:focus {
   outline: none;
 }
 
+footer {
+  color: white;
+}
+
 .custom-field {
   position: relative;
   font-size: 14px;
@@ -29,7 +33,7 @@ input:focus {
 
 .custom-field input {
   font-size: large;
-  color: rgba(0, 0, 0, 0.653);
+  color: white;
   padding: 2.5ch;
   height: 0.5ch;
   margin-bottom: 1ch;
@@ -81,7 +85,7 @@ button:active {
 }
 
 #login-root-div {
-  background-image: url("../media/images/loginBackground.jpg");
+  background-image: url("../../media/images/loginBackground.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -112,5 +116,6 @@ button:active {
   );
   border-radius: 16px;
   backdrop-filter: blur(2.5px);
-  -webkit-backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(8px);
+  text-shadow: 1px 1px 1px black;
 }

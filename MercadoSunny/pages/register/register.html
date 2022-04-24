@@ -1,0 +1,73 @@
+<!-- 28/04/2022
+Gabriel Arno Voltolini
+Lucas Mota de Oliveira
+Victor do Amaral -->
+
+<!-- TODO - dar um belo jeito em CSS, deixei apenas ideias e cópias (〜￣▽￣)〜 - L -->
+
+<!DOCTYPE html>
+  <head>
+    <title>Register</title>
+    <link rel="stylesheet" href="../../css/default.css">      
+    <link rel="stylesheet" href="register.css">      
+    <script src="register.js"></script>
+  </head>
+  <body>
+    <div id="register-root-div">
+      <div id="register-div">
+        <h1>Register</h1>
+        <form>
+          <div>
+            <label class="custom-field">
+              <input id="userName" type="text" />
+              <span class="placeholder">Username</span>
+            </label>
+          </div>
+          <div>
+            <label class="custom-field">
+              <input id="nomeCompleto" type="text" />
+              <span class="placeholder">Nome Completo</span>
+            </label>
+          </div>
+          <div>
+            <label class="custom-field">
+              <input id="email" type="text" />
+              <span class="placeholder">Email</span>
+            </label>
+          </div>
+          <div>
+            <label class="custom-field">
+              <input id="dataNascimento" type="date" />
+              <span class="placeholder">Data de Nascimento</span>
+            </label>
+          </div>
+          <div>
+            <label class="custom-field">
+              <input id="password" type="password" />
+              <span class="placeholder">Password</span>
+            </label>
+          </div>
+          <!-- <div>
+            <label class="custom-field">
+              <input name="notification" id="notificationYes" type="radio" value="Sim"/>
+              <label for="notificationYes">Sim</label>
+              <input name="notification" id="notificationNo" type="radio" value="Nao" />
+              <label for="notificationNo">Não</label>
+              <span class="placeholder">Deseja receber avisos de ofertas e promoções?</span>
+            </label>
+          </div> CSS não me ajuda ＞﹏＜ mas ta ai a ideia - L -->
+          <button type="submit" onClick="setaCookie()">Registrar</button>
+        </form>
+      </div>
+      <div>
+        <input name="mode" id="normal" type="radio" value="Normal"/>
+        <label class="customization" for="normal">Normal</label>
+        <input name="mode" id="custom" type="radio" value="Custom"/>
+        <label class="customization" for="custom">Custom</label>
+    </div>
+    </div>
+    <footer>
+        Alunos: Gabriel Arno Voltolini, Lucas Mota de Oliveira e Victor do Amaral
+    </footer>
+  </body>
+</html>

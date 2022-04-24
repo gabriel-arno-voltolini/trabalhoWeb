@@ -9,7 +9,10 @@ Victor do Amaral -->
 
 <!DOCTYPE html>
   <head>
+    <title>Login</title>
+    <link rel="stylesheet" href="../../css/default.css">      
     <link rel="stylesheet" href="login.css">      
+    <script src="login.js"></script>
   </head>
   <body>
     <div id="login-root-div">
@@ -18,19 +21,22 @@ Victor do Amaral -->
         <form>
           <div>
             <label class="custom-field">
-              <input name="userName" type="text" />
+              <input id="userName" type="text" />
               <span class="placeholder">Username</span>
             </label>
           </div>
           <div>
             <label class="custom-field">
-              <input name="password" type="password" />
+              <input id="password" type="password" />
               <span class="placeholder">Password</span>
             </label>
           </div>
-          <button type="submit" onClick="{handleLogin}">Login</button>
+          <button type="submit" onClick="setaCookie()">Login</button>
         </form>
       </div>
     </div>
+    <footer>
+      Alunos: Gabriel Arno Voltolini, Lucas Mota de Oliveira e Victor do Amaral
+  </footer>
   </body>
 </html>
