@@ -8,35 +8,50 @@ Victor do Amaral -->
 <!-- TODO Ao clicar no login um cookie deve ser criado com o conteúdo do campo login armazenado no mesmo -->
 
 <!DOCTYPE html>
-  <head>
-    <title>Login</title>
-    <link rel="stylesheet" href="../../css/default.css">      
-    <link rel="stylesheet" href="login.css">      
-    <script src="login.js"></script>
-  </head>
-  <body>
-    <div id="login-root-div">
-      <div id="login-div">
-        <h1>Welcome</h1>
-        <form>
-          <div>
-            <label class="custom-field">
-              <input id="userName" type="text" />
-              <span class="placeholder">Username</span>
-            </label>
-          </div>
-          <div>
-            <label class="custom-field">
-              <input id="password" type="password" />
-              <span class="placeholder">Password</span>
-            </label>
-          </div>
-          <button type="submit" onClick="setaCookie()">Login</button>
-        </form>
-      </div>
+
+<head>
+  <title>Login</title>
+  <link rel="stylesheet" href="../../css/default.css">
+  <link rel="stylesheet" href="login.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="login.js"></script>
+</head>
+
+<header>
+  <nav>
+    <div class="topnav" id="myTopnav">
+      <ul class="header-ul">
+        <li class="header-li"><a id="icon-item" href="../home/home.html"><img id="icon" src="../../media/images/icon.png"
+              alt="icon"></a></li>
+      </ul>
+  </nav>
+  </div>
+</header>
+
+<body>
+  <div id="login-root-div">
+    <div id="login-div">
+      <h1>Welcome</h1>
+      <form>
+        <div>
+          <label class="custom-field">
+            <input id="userName" type="text" />
+            <span class="placeholder">Username</span>
+          </label>
+        </div>
+        <div>
+          <label class="custom-field">
+            <input id="password" type="password" />
+            <span class="placeholder">Password</span>
+          </label>
+        </div>
+        <button type="submit" onClick="setaCookie()">Login</button>
+      </form>
     </div>
-    <footer>
-      Alunos: Gabriel Arno Voltolini, Lucas Mota de Oliveira e Victor do Amaral
+  </div>
+  <footer id="footer">
+    Alunos: Gabriel Arno Voltolini, Lucas Mota de Oliveira e Victor do Amaral
   </footer>
-  </body>
+</body>
+
 </html>

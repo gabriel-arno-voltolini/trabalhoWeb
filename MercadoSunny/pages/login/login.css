@@ -21,10 +21,6 @@ input:focus {
   outline: none;
 }
 
-footer {
-  color: white;
-}
-
 .custom-field {
   position: relative;
   font-size: 14px;
@@ -87,7 +83,6 @@ button:active {
 #login-root-div {
   background-image: url("../../media/images/loginBackground.jpg");
   background-position: center;
-  background-repeat: no-repeat;
   background-size: cover;
   background-attachment: fixed;
   background-size: 100%;

@@ -12,6 +12,7 @@ body {
     padding: 0;
     overflow: hidden;
     background-color: #333;
+    z-index: 9999;
 }
 
 .header-li {
@@ -48,43 +49,6 @@ body {
 
 .nav-item:hover:not(.active) {
     background-color: #111;
-}
-
-.menu-ul {
-    list-style-type: none;
-    border-radius: 8px;
-    margin: 0 1em 1em 1em;
-    padding: 0;
-    width: 10%;
-    background-color: #f1f1f1;
-    position: fixed;
-    height: 82%;
-    overflow: auto;
-}
-
-@media screen and (max-width: 1000px) {
-    .menu-ul {
-        height: 16%;
-        width: 25%;
-        font-size: 0.8em;
-    }
-}
-
-.menu-li a {
-    display: block;
-    color: #000;
-    padding: 8px 16px;
-    text-decoration: none;
-}
-
-.menu-li a.active {
-    background-color: #FFC619;
-    color: white;
-}
-
-.menu-li a:hover:not(.active) {
-    background-color: #555;
-    color: white;
 }
 
 footer {
