@@ -21,3 +21,29 @@ body {
 #description-container {
     font-size: 2em;
 }
+
+@media screen and (max-width: 1000px) {
+    #mascot-image {
+        width: 12em;
+    }
+
+    #description-container {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    #description-container {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    #mascot-image {
+        width: 10em;
+    }
+
+    #description-container {
+        font-size: 1em;
+    }
+}
