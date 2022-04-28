@@ -79,6 +79,10 @@ body {
     padding-right: 1em;
 }
 
+#profile-item {
+    padding-right: 1em;
+}
+
 #logged-text {
     color: #fff;
 }

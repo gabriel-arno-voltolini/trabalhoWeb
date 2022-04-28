@@ -10,7 +10,7 @@ Victor do Amaral -->
   <link rel="stylesheet" href="../../css/default.css">
   <link rel="stylesheet" href="register.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="default.js"></script>
+  <script src="../../js/default.js"></script>
   <script src="register.js"></script>
 </head>
 
@@ -22,7 +22,8 @@ Victor do Amaral -->
               src="../../media/images/icon.png" alt="icon"></a></li>
         <li>
         <li class="topnav-right header-li">
-          <a id="login-item" href="home.html"><img id="profile" src="../../media/images/profile.png" alt="profile"></a>
+          <a id="profile-item" href="../register/register.html"><img id="profile" src="../../media/images/profile.png"
+              alt="profile"></a>
         </li>
         <li class="topnav-right header-li logged-text-container">
           <h4 id="logged-text">Usuário não autenticado</h4>
@@ -34,7 +35,7 @@ Victor do Amaral -->
   </div>
 </header>
 
-<body>
+<body onload="authenticateUser()">
   <div id="register-root-div">
     <div id="register-div">
       <h1 id="register-title">Register</h1>
