@@ -17,26 +17,6 @@ Victor do Amaral -->
   <script src="login.js"></script>
 </head>
 
-<header>
-  <nav>
-    <div class="topnav" id="myTopnav">
-      <ul class="header-ul">
-        <li class="header-li"><a id="icon-item" href="../home/home.html"><img id="icon" src="../../media/images/icon.png"
-              alt="icon"></a></li>
-        <li>
-        <li class="topnav-right header-li">
-          <a id="login-item" href="home.html"><img id="profile" src="../../media/images/profile.png" alt="profile"></a>
-        </li>
-        <li class="topnav-right header-li logged-text-container">
-          <h4 id="logged-text">Usuário não autenticado</h4>
-        </li>
-        <li>
-        </li>
-      </ul>
-  </nav>
-  </div>
-</header>
-
 <body>
   <div id="login-root-div">
     <div id="login-div">
@@ -54,7 +34,7 @@ Victor do Amaral -->
             <span class="placeholder">Password</span>
           </label>
         </div>
-        <button type="submit" onClick="setCookie()">Autenticar</button>
+        <button type="submit" onClick="return setCookie()">Autenticar</button>
       </form>
     </div>
   </div>
