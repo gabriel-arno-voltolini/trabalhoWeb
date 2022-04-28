@@ -51,6 +51,22 @@ body {
     background-color: #111;
 }
 
+.topnav-right {
+    float: right;
+}
+
+#login-item {
+    padding-right: 1em;
+}
+
+#logged-text {
+    color: #fff;
+}
+
+.logged-text-container{
+    padding: 7px;
+}
+
 footer {
     position: fixed;
     bottom: 0;

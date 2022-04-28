@@ -1,24 +1,15 @@
-function getCookie(cname) {
-    let name = cname + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
-    for(let i = 0; i <ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(name) == 0) {
-        return c.substring(name.length, c.length);
-      }
-    }
-    return "";
-  }
+function setUserName(name) {
+    document.getElementById('logged-text').textContent = name;
+}
 
-function setUserName() {
-    var name = getCookie("user");
-    document.getElementById('loggedUserName').textContent = "Bem-vido(a) " + name;
+function userIsValid() {
+    return true;
 }
 
 function authenticateUser() {
-    setUserName();
+    if (userIsValid()) {
+        setUserName("Bem-vido(a) " + "marquinhos");
+    } else {
+        setUserName("Usuário inválido");
+    }
 }
