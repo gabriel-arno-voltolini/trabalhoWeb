@@ -28,6 +28,7 @@ function authenticateUser() {
     var name = getCookie("user");
     if (userIsValid()) {
         setUserName("Bem-vindo(a) " + name);
+        document.getElementById("profile-item").style.display = "inline";
         return
     }
 
