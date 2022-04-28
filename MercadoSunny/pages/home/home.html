@@ -16,20 +16,23 @@ Victor do Amaral -->
   <link rel="stylesheet" href="../../css/default.css">
   <link rel="stylesheet" href="home.css">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="home.js"></script>
 </head>
 
 <header>
   <nav>
     <div class="topnav" id="myTopnav">
       <ul class="header-ul">
+        
         <li class="header-li"><a id="icon-item" href="home.html"><img id="icon" src="../../media/images/icon.png"
               alt="icon"></a></li>
+              <span id="loggedUserName" style="color: aliceblue;"></span>
       </ul>
   </nav>
   </div>
 </header>
 
-<body>
+<body  onload="authenticateUser()">
   <ul class="menu-ul">
     <li class="menu-li"><a class="active" href="../login/login.html">Login</a></li>
     <li class="menu-li"><a href="#products">Produtos</a></li>
