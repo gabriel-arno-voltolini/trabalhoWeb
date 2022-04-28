@@ -1,101 +1,106 @@
+/* 28/04/2022
+Gabriel Arno Voltolini
+Lucas Mota de Oliveira
+Victor do Amaral */
+
 body {
-    margin: 0;
-    padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .header-ul {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-    z-index: 9999;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+  z-index: 9999;
 }
 
 .header-li {
-    float: left;
+  float: left;
 }
 
 #icon {
-    background-color: #ccc;
-    border-radius: 50%;
-    margin-left: 1em;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    width: 70px;
-    display: inline;
-    vertical-align: middle;
-    transition: all 250ms;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin-left: 1em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 70px;
+  display: inline;
+  vertical-align: middle;
+  transition: all 250ms;
 }
 
 #icon-item {
-    transition: all 250ms;
+  transition: all 250ms;
 }
 
 #icon-item:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 #profile {
-    background-color: #FFF;
-    border-radius: 50%;
-    margin-left: 1em;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    width: 60px;
-    display: inline;
-    vertical-align: middle;
-    transition: all 250ms;
+  background-color: #fff;
+  border-radius: 50%;
+  margin-left: 1em;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 60px;
+  display: inline;
+  vertical-align: middle;
+  transition: all 250ms;
 }
 
 #profile-item {
-    transition: all 250ms;
+  transition: all 250ms;
 }
 
 #profile-item:hover {
-    opacity: 0.6;
+  opacity: 0.6;
 }
 
 .nav-item {
-    display: block;
-    color: #FFF;
-    text-align: center;
-    padding: 18px 20px;
-    text-decoration: none;
+  display: block;
+  color: #fff;
+  text-align: center;
+  padding: 18px 20px;
+  text-decoration: none;
 }
 
 .nav-item:hover:not(.active) {
-    background-color: #111;
+  background-color: #111;
 }
 
 .topnav-right {
-    float: right;
+  float: right;
 }
 
 #login-item {
-    padding-right: 1em;
+  padding-right: 1em;
 }
 
 #profile-item {
-    padding-right: 1em;
+  padding-right: 1em;
 }
 
 #logged-text {
-    color: #fff;
+  color: #fff;
 }
 
-.logged-text-container{
-    padding: 7px;
+.logged-text-container {
+  padding: 7px;
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    background-color: #FFF;
-    padding: 1em;
-    margin: 1em;
-    border-radius: 8px;
+  position: fixed;
+  bottom: 0;
+  background-color: #fff;
+  padding: 1em;
+  margin: 1em;
+  border-radius: 8px;
 }

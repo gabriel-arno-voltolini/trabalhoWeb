@@ -1,3 +1,8 @@
+/* 28/04/2022
+Gabriel Arno Voltolini
+Lucas Mota de Oliveira
+Victor do Amaral */
+
 function setNormalMode() {
     document.getElementById("register-button").style.backgroundColor = "orange";
     document.getElementById("register-button").style.borderRadius = "4px";
