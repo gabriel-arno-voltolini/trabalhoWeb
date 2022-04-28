@@ -29,6 +29,6 @@ function authenticateUser() {
     if (userIsValid()) {
         setUserName("Bem-vido(a) " + name);
     } else {
-        setUserName("Usuário inválido");
+        window.location.href = "../denied-access/denied-access.html";
     }
 }
