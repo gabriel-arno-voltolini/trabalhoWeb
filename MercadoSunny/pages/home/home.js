@@ -1,14 +1,33 @@
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
 function setUserName(name) {
     document.getElementById('logged-text').textContent = name;
 }
 
 function userIsValid() {
-    return true;
+    var name = getCookie("user");
+    var pass = getCookie("password");
+    return name && pass;
 }
 
 function authenticateUser() {
+    var name = getCookie("user");
     if (userIsValid()) {
-        setUserName("Bem-vido(a) " + "marquinhos");
+        setUserName("Bem-vido(a) " + name);
     } else {
         setUserName("Usuário inválido");
     }
