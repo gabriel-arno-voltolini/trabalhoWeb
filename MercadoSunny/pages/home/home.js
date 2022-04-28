@@ -28,7 +28,5 @@ function authenticateUser() {
     var name = getCookie("user");
     if (userIsValid()) {
         setUserName("Bem-vido(a) " + name);
-    } else {
-        window.location.href = "../denied-access/denied-access.html";
     }
 }
