@@ -6,6 +6,8 @@ Victor do Amaral */
 body {
   margin: 0;
   padding: 0;
+  background-color: #ccc !important;
+
 }
 
 .header-ul {
