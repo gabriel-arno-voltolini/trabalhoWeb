@@ -35,7 +35,7 @@
 </header>
 
 <body onload="authenticateUser()">
-  <div class="col-lg-3 position-absolute top-50 start-50 translate-middle">
+  <div id="register-div" class="col-lg-3 position-absolute top-50 start-50 translate-middle">
     <div class="container p-5 bg-light rounded">
       <h2>Cadastro de Produtos</h2>
       <form action=" /action_page.php">
@@ -58,9 +58,47 @@
         <button onClick="return saveProduct()" type="button" class="btn btn-primary">Salvar</button>
       </form>
     </div>
-    <div class="container">
-      <a class="btn btn-primary mt-3 form-control" id="icon-item" href="../report/report.html" target="_blank">Relatório</a>
+    <div id="register-buttons" class="container">
+      <button onClick="return alternateToTable()" type="button" class="btn btn-primary form-control mt-3">Ver
+        Tabela</button>
+      <a class="btn btn-primary mt-3 form-control" id="icon-item" href="../report/report.html"
+        target="_blank">Relatório</a>
     </div>
+  </div>
+  <div id="content">
+    <div id="table-div" class="table-responsive d-none">
+      <table class="table table-striped table-hover">
+        <caption>Relatório de Produtos</caption>
+        <thead class="thead-dark">
+          <tr>
+            <th scope="col">Código</th>
+            <th scope="col">Nome</th>
+            <th scope="col">Quantidade</th>
+            <th scope="col">Preço</th>
+          </tr>
+        </thead>
+        <tbody id="productsBody">
+          <script>
+            var productsList = JSON.parse(localStorage.getItem("productsList"));
+            productsList.forEach((element) => {
+              document.getElementById("productsBody").innerHTML +=
+                `<tr>
+                                <th scope="row">${element.code}</th>
+                                <td>${element.name}</td>
+                                <td>${element.quantity}</td>
+                                <td>R$ ${element.price}</td>
+                            </tr>`;
+            });
+          </script>
+        </tbody>
+      </table>
+    </div>
+  </div>
+  <div id="table-buttons" class="container d-none">
+    <button onClick="return alternateToRegister()" type="button" class="btn btn-primary form-control mt-3">Cadastrar
+      Produto</button>
+    <a class="btn btn-primary mt-3 form-control" id="icon-item" href="../report/report.html"
+      target="_blank">Relatório</a>
   </div>
   <footer>
     Alunos: Gabriel Arno Voltolini, Lucas Mota de Oliveira e Victor do Amaral

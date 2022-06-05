@@ -20,4 +20,20 @@ function saveProduct() {
     list.push(data);
 
     localStorage.setItem("productsList", JSON.stringify(list));
+
+    window.location.href = ""
+}
+
+function alternateToTable() {
+    document.getElementById("register-div").className = "col-lg-3 position-absolute top-50 start-50 translate-middle d-none";
+    document.getElementById("register-buttons").className = "container d-none";
+    document.getElementById("table-div").className = "table-responsive";
+    document.getElementById("table-buttons").className = "container";
+}
+
+function alternateToRegister() {
+    document.getElementById("register-div").className = "col-lg-3 position-absolute top-50 start-50 translate-middle";
+    document.getElementById("register-buttons").className = "container";
+    document.getElementById("table-div").className = "table-responsive d-none";
+    document.getElementById("table-buttons").className = "container d-none";
 }
