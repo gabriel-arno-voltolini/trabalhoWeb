@@ -1,0 +1,10 @@
+body {
+    background-color: #ccc !important;
+}
+
+#content {
+    width: 90vw;
+    margin: auto;
+    text-align: center;
+    margin-top: 7em;
+  }
