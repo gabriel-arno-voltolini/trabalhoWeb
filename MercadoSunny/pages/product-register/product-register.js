@@ -1,3 +1,12 @@
+function isJsonString(str) {
+    try {
+        JSON.parse(str);
+    } catch (e) {
+        return false;
+    }
+    return true;
+}
+
 function saveProduct() {
     var code = parseFloat(document.getElementById("code").value);
     var name = document.getElementById("name").value;
@@ -12,8 +21,8 @@ function saveProduct() {
     }
 
     let localStorageStr = localStorage.getItem("productsList");
-    
-    if (localStorageStr === null | localStorageStr == '') {
+
+    if (localStorageStr === null | localStorageStr == '' | !isJsonString(localStorageStr)) {
         list = [];
     }
     else {
