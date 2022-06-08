@@ -7,14 +7,17 @@ function saveProduct() {
     var data = {
         code: code,
         name: name,
-        quantity: quantity, 
+        quantity: quantity,
         price: price
     }
 
-    var list = JSON.parse(localStorage.getItem("productsList"))
-
-    if(list == null) {
+    let localStorageStr = localStorage.getItem("productsList");
+    
+    if (localStorageStr === null | localStorageStr == '') {
         list = [];
+    }
+    else {
+        list = JSON.parse(localStorageStr);
     }
 
     list.push(data);
@@ -24,7 +27,7 @@ function saveProduct() {
     window.location.href = ""
 }
 
-function updateProduct(key, item){
+function updateProduct(key, item) {
     objStr = JSON.stringify(item);
     localStorage.setItem(key, objStr);
 }
