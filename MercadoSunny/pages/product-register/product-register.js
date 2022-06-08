@@ -24,6 +24,11 @@ function saveProduct() {
     window.location.href = ""
 }
 
+function updateProduct(key, item){
+    objStr = JSON.stringify(item);
+    localStorage.setItem(key, objStr);
+}
+
 function alternateToTable() {
     document.getElementById("register-div").className = "col-lg-3 position-absolute top-50 start-50 translate-middle d-none";
     document.getElementById("register-buttons").className = "container d-none";

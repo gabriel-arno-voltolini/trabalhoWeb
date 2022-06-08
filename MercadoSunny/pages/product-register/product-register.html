@@ -75,11 +75,18 @@
             <th scope="col">Nome</th>
             <th scope="col">Quantidade</th>
             <th scope="col">Preço</th>
+            <th scope="col">Excluir</th>
           </tr>
         </thead>
         <tbody id="productsBody">
           <script>
             var productsList = JSON.parse(localStorage.getItem("productsList"));
+
+            function deleteProduct(code){
+              localStorage.removeItem(code);
+              alert("Produto excluido com sucesso! Id= " + code);
+            }
+            
             productsList.forEach((element) => {
               document.getElementById("productsBody").innerHTML +=
                 `<tr>
@@ -87,6 +94,7 @@
                                 <td>${element.name}</td>
                                 <td>${element.quantity}</td>
                                 <td>R$ ${element.price}</td>
+                                <td><button onClick="return deleteProduct(${element.code})">X</button></td>
                             </tr>`;
             });
           </script>
