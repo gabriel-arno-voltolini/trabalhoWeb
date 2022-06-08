@@ -83,8 +83,12 @@
             var productsList = JSON.parse(localStorage.getItem("productsList"));
 
             function deleteProduct(code){
-              localStorage.removeItem(code);
-              alert("Produto excluido com sucesso! Id= " + code);
+                let deletedProductList =  productsList.filter(function(element) {
+                return element.code !== code;
+              });
+              localStorage.setItem("productsList", JSON.stringify(deletedProductList));
+              alert("Produto excluido com sucesso!\n Id= " + code);
+              window.location.reload();
             }
             
             productsList.forEach((element) => {
