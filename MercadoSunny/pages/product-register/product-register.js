@@ -1,3 +1,8 @@
+// 28/04/2022
+// Gabriel Arno Voltolini
+// Lucas Mota de Oliveira
+// Victor do Amaral
+
 function isJsonString(str) {
     try {
         JSON.parse(str);
@@ -34,27 +39,49 @@ function saveProduct() {
     window.location.href = ""
 }
 
-function deleteProduct(code){
-    let deletedProductList =  productsList.filter(function(element) {
-    return parseInt(element.code) !== code;
-  });
-  localStorage.setItem("productsList", JSON.stringify(deletedProductList));
-  alert("Produto excluido com sucesso!\n Id= " + code);
-  window.location.reload();
+function deleteProduct(code) {
+    var productsList = JSON.parse(localStorage.getItem('productsList'));
+    let deletedProductList = productsList.filter(function (element) {
+        return parseInt(element.code) !== parseInt(code);
+    });
+    localStorage.setItem("productsList", JSON.stringify(deletedProductList));
+    alert("Produto excluido com sucesso!\n Id= " + code);
+    window.location.reload();
 }
 
-function redirectToUpdatePage(code){
+function fillUpdateForm() {
+    var product = JSON.parse(localStorage.getItem('productUpdateRequest'))[0];
+    document.getElementById('code').value = product.code;
+    document.getElementById('name').value = product.name;
+    document.getElementById('quantity').value = product.quantity;
+    document.getElementById('price').value = product.price;
+}
+
+function updateProduct() {
+    var product = {
+        code: document.getElementById('code').value,
+        name: document.getElementById('name').value,
+        quantity: document.getElementById('quantity').value,
+        price: document.getElementById('price').value
+    };
+    var products = JSON.parse(localStorage.getItem('productsList'));
+    var index = products.map(object => parseInt(object.code)).indexOf(parseInt(product.code));
+    products[index] = product;
+    localStorage.setItem('productsList', JSON.stringify(products));
+    returnToRegisterPage();
+}
+
+function returnToRegisterPage() {
+    window.location.replace("product-register.html");
+}
+
+function redirectToUpdatePage(code) {
     var productsList = JSON.parse(localStorage.getItem("productsList"));
-    let product =  productsList.filter(function(element) {
-      return parseInt(element.code) === parseInt(code);
+    let product = productsList.filter(function (element) {
+        return parseInt(element.code) === parseInt(code);
     });
     localStorage.setItem("productUpdateRequest", JSON.stringify(product));
     window.location.replace("product-update-popup.html");
-  }
-
-function updateProduct(key, item) {
-    objStr = JSON.stringify(item);
-    localStorage.setItem(key, objStr);
 }
 
 function alternateToTable() {
@@ -74,8 +101,8 @@ function alternateToRegister() {
 function loadProducts() {
     var productsList = JSON.parse(localStorage.getItem("productsList"));
     productsList.forEach((element) => {
-      document.getElementById("productsBody").innerHTML +=
-        `<tr>
+        document.getElementById("productsBody").innerHTML +=
+            `<tr>
                         <th scope="row">${element.code}</th>
                         <td>${element.name}</td>
                         <td>${element.quantity}</td>
