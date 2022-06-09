@@ -85,7 +85,7 @@
 
             function deleteProduct(code){
                 let deletedProductList =  productsList.filter(function(element) {
-                return element.code !== code;
+                return parseInt(element.code) !== code;
               });
               localStorage.setItem("productsList", JSON.stringify(deletedProductList));
               alert("Produto excluido com sucesso!\n Id= " + code);
