@@ -44,8 +44,9 @@ function deleteProduct(code){
 }
 
 function redirectToUpdatePage(code){
+    var productsList = JSON.parse(localStorage.getItem("productsList"));
     let product =  productsList.filter(function(element) {
-      return element.code === code;
+      return parseInt(element.code) === parseInt(code);
     });
     localStorage.setItem("productUpdateRequest", JSON.stringify(product));
     window.location.replace("product-update-popup.html");
