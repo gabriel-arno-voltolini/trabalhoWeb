@@ -91,6 +91,14 @@
               alert("Produto excluido com sucesso!\n Id= " + code);
               window.location.reload();
             }
+
+            function updateProduct(code){
+              let product =  productsList.filter(function(element) {
+                return element.code === code;
+              });
+              localStorage.setItem("productUpdateRequest", JSON.stringify(product));
+              window.location.replace("product-update-popup.html");
+            }
             
             productsList.forEach((element) => {
               document.getElementById("productsBody").innerHTML +=
