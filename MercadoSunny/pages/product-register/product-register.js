@@ -30,10 +30,17 @@ function saveProduct() {
     }
 
     list.push(data);
-
     localStorage.setItem("productsList", JSON.stringify(list));
-
     window.location.href = ""
+}
+
+function deleteProduct(code){
+    let deletedProductList =  productsList.filter(function(element) {
+    return parseInt(element.code) !== code;
+  });
+  localStorage.setItem("productsList", JSON.stringify(deletedProductList));
+  alert("Produto excluido com sucesso!\n Id= " + code);
+  window.location.reload();
 }
 
 function updateProduct(key, item) {

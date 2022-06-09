@@ -83,16 +83,7 @@
           <script>
             var productsList = JSON.parse(localStorage.getItem("productsList"));
 
-            function deleteProduct(code){
-                let deletedProductList =  productsList.filter(function(element) {
-                return parseInt(element.code) !== code;
-              });
-              localStorage.setItem("productsList", JSON.stringify(deletedProductList));
-              alert("Produto excluido com sucesso!\n Id= " + code);
-              window.location.reload();
-            }
-
-            function updateProduct(code){
+            function redirectToUpdatePage(code){
               let product =  productsList.filter(function(element) {
                 return element.code === code;
               });
@@ -108,7 +99,7 @@
                                 <td>${element.quantity}</td>
                                 <td>R$ ${element.price}</td>
                                 <td><button onClick="return deleteProduct(${element.code})">⨉</button></td>
-                                <td><button onClick="return updateProduct(${element.code})">⨆</button></td>
+                                <td><button onClick="return redirectToUpdatePage(${element.code})">⨆</button></td>
                             </tr>`;
             });
           </script>
