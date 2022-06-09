@@ -69,3 +69,18 @@ function alternateToRegister() {
     document.getElementById("table-div").className = "table-responsive d-none";
     document.getElementById("table-buttons").className = "container d-none";
 }
+
+function loadProducts() {
+    var productsList = JSON.parse(localStorage.getItem("productsList"));
+    productsList.forEach((element) => {
+      document.getElementById("productsBody").innerHTML +=
+        `<tr>
+                        <th scope="row">${element.code}</th>
+                        <td>${element.name}</td>
+                        <td>${element.quantity}</td>
+                        <td>R$ ${element.price}</td>
+                        <td><button onClick="return deleteProduct(${element.code})">⨉</button></td>
+                        <td><button onClick="return redirectToUpdatePage(${element.code})">⨆</button></td>
+                    </tr>`;
+    });
+}
