@@ -82,15 +82,6 @@
         <tbody id="productsBody">
           <script>
             var productsList = JSON.parse(localStorage.getItem("productsList"));
-
-            function redirectToUpdatePage(code){
-              let product =  productsList.filter(function(element) {
-                return element.code === code;
-              });
-              localStorage.setItem("productUpdateRequest", JSON.stringify(product));
-              window.location.replace("product-update-popup.html");
-            }
-            
             productsList.forEach((element) => {
               document.getElementById("productsBody").innerHTML +=
                 `<tr>

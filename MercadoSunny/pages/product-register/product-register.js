@@ -43,6 +43,14 @@ function deleteProduct(code){
   window.location.reload();
 }
 
+function redirectToUpdatePage(code){
+    let product =  productsList.filter(function(element) {
+      return element.code === code;
+    });
+    localStorage.setItem("productUpdateRequest", JSON.stringify(product));
+    window.location.replace("product-update-popup.html");
+  }
+
 function updateProduct(key, item) {
     objStr = JSON.stringify(item);
     localStorage.setItem(key, objStr);
