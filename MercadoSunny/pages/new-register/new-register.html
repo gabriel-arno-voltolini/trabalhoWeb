@@ -1,0 +1,105 @@
+<!-- 
+28/04/2022
+Gabriel Arno Voltolini
+Lucas Mota de Oliveira
+Victor do Amaral -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Cadastrar</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="../../css/default.css">
+  <link rel="stylesheet" href="new-register.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="../../js/default.js"></script>
+  <script src="new-register.js"></script>
+</head>
+
+<header>
+  <nav>
+    <div class="topnav" id="myTopnav">
+      <ul class="header-ul">
+        <li class="header-li"><a id="icon-item" href="../home/home.html"><img id="icon"
+              src="../../media/images/icon.png" alt="icon"></a></li>
+        <li>
+        <li class="topnav-right header-li">
+          <a id="profile-item" href="../user-register/user-register.html"><img id="profile"
+              src="../../media/images/profile.png" alt="profile"></a>
+        </li>
+        <li class="topnav-right header-li logged-text-container">
+          <h4 id="logged-text">Usuário não autenticado</h4>
+        </li>
+        <li>
+        </li>
+      </ul>
+  </nav>
+  </div>
+</header>
+
+<body onload="authenticateUser()">
+  <div id="register-div" class="col-lg-3 position-absolute top-50 start-50 translate-middle">
+    <div id="exclusion" class="container p-5 bg-light rounded">
+      <h2>Cadastro 2</h2>
+      <form action=" /action_page.php">
+        <div class="mb-3 mt-3">
+          <label for="id">ID:</label>
+          <input type="number" class="form-control" id="id" placeholder="Insira o ID" name="id">
+        </div>
+        <button onClick="return search()" type="button" class="btn btn-primary">Consultar</button>
+        <div class="mb-3 mt-3">
+          <label for="name">Nome:</label>
+          <input readonly type="text" class="form-control" id="name" placeholder="Nome" name="name">
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="email">Email:</label>
+          <input readonly type="text" class="form-control" id="email" placeholder="Email" name="email">
+        </div>
+        <button onClick="return exclusion()" type="button" class="btn btn-primary">Exclusão</button>
+        <div id="alert" class="alert mb-3 mt-3" role="alert"></div>
+      </form>
+      <button onClick="return alternateToUpdate()" type="button" class="btn btn-primary form-control mt-3">
+        Alternar para Atualização
+      </button>
+    </div>
+
+    <div id="update" class="container p-5 bg-light rounded d-none">
+      <h2>Cadastro 2</h2>
+      <form action=" /action_page.php">
+        <div class="mb-3 mt-3">
+          <label for="id-put">ID:</label>
+          <input type="number" class="form-control" id="id-put" placeholder="Insira o ID" name="id-put">
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="name-put">Nome:</label>
+          <input type="text" class="form-control" id="name-put" placeholder="Nome" name="name-put">
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="department-put">Departamento:</label>
+          <input type="text" class="form-control" id="department-put" placeholder="Departamento" name="department-put">
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="address-put">Endereço:</label>
+          <input type="text" class="form-control" id="address-put" placeholder="Endereço" name="address-put">
+        </div>
+        <div class="mb-3 mt-3">
+          <label for="email-put">Email:</label>
+          <input type="text" class="form-control" id="email-put" placeholder="Email" name="email-put">
+        </div>
+        <button onClick="return update()" type="button" class="btn btn-primary">Inserir</button>
+        <div id="alert-put" class="alert mb-3 mt-3" role="alert"></div>
+      </form>
+      <button onClick="return alternateToExclusion()" type="button" class="btn btn-primary form-control mt-3">
+        Alternar para Exclusão
+      </button>
+    </div>
+  </div>
+  <footer>
+    Alunos: Gabriel Arno Voltolini, Lucas Mota de Oliveira e Victor do Amaral
+  </footer>
+</body>
+
+</html>

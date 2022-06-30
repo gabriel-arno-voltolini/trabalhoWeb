@@ -1,0 +1,17 @@
+/* 28/04/2022
+Gabriel Arno Voltolini
+Lucas Mota de Oliveira
+Victor do Amaral */
+
+#page-container {
+    background-color: aliceblue !important;
+}
+
+#content {
+    width: 90vw;
+    margin: auto;
+    text-align: center;
+    margin-top: 7em;
+    overflow: auto;
+    max-height: 68vh;
+}
